@@ -270,6 +270,7 @@ a:hover .icon-external-link { opacity: 1; }
   font-size: var(--font-size-14);
   color: var(--color-text-primary);
   text-decoration: underline;
+  text-decoration-style: dotted;
   text-underline-offset: 3px;
 }
 
@@ -280,13 +281,6 @@ a:hover .icon-external-link { opacity: 1; }
   gap: 4px;
   font-size: var(--font-size-14);
   color: var(--color-text-primary);
-  opacity: 0.55;
-  text-decoration: none;
-  transition: opacity var(--ease-standard);
-}
-
-.connect-social a:hover {
-  opacity: 1;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 3px;
