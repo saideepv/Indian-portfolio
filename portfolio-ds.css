@@ -219,12 +219,18 @@ nav {
   z-index: 100;
   background: var(--color-bg-canvas);
   border-top: 1px solid var(--color-border);
-  padding: 12px 0 env(safe-area-inset-bottom, 12px);
-  justify-content: space-around;
-  align-items: center;
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
+  align-items: stretch;
 }
 
 .mobile-nav a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 8px 12px;
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
@@ -395,7 +401,7 @@ body.page-home .connect { max-width: 1440px; margin: 0 auto; padding: var(--spac
 /* About: single flex-column .page wrapper */
 body.page-about .page { max-width: 1440px; margin: 0 auto; padding: var(--space-10) var(--space-page-margin); display: flex; flex-direction: column; gap: var(--space-10); }
 body.page-about .section-title { font-size: var(--font-size-24); font-weight: var(--font-weight-bold); letter-spacing: var(--tracking-snug); margin-bottom: var(--space-3); }
-body.page-about .connect { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding-bottom: 0; }
+body.page-about .connect { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding-bottom: 0; margin-top: var(--space-3); }
 
 
 /* ── 6. RESPONSIVE ─────────────────────────────────────────────────────── */
@@ -420,7 +426,7 @@ body.page-about .connect { text-align: center; display: flex; flex-direction: co
 @media (max-width: 600px) {
   nav { display: none; }
   .mobile-nav { display: flex; }
-  body { padding-bottom: var(--space-9); }
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
   footer { padding: var(--space-2) var(--space-page-margin-mobile); }
 
   body.page-home .hero { padding: var(--space-5) var(--space-page-margin-mobile) var(--space-4); flex-direction: column-reverse; }
